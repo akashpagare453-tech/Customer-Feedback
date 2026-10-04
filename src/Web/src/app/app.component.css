@@ -1,0 +1,59 @@
+.app-layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    transition: var(--transition-fast);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+    background: rgba(var(--primary-hue), var(--primary-sat), 95%, 0.5);
+}
+
+.nav-links a.active {
+    color: var(--color-primary);
+    background: rgba(var(--primary-hue), var(--primary-sat), 95%, 1);
+}
+
+main {
+    flex: 1;
+    position: relative;
+}
